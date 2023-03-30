@@ -1,3 +1,8 @@
+'''
+    Create a program in Python that asks the user for his weight and height and
+    calculate the Body Mass Index: BMI= weight/height²
+'''
+
 weight = float(input("Type your weight: "))
 height = float(input("Type your height: "))
 imc = (weight/(height*height))
