@@ -1,3 +1,9 @@
+'''
+    Create a program in Python that prompts the user for three
+    values (A, B, and C) and checks whether the value stored in
+    B is the smallest.
+'''
+
 n1 = int(input("Type your first number: "))
 n2 = int(input("Type your second number: "))
 n3 = int(input("Type your third number:"))
