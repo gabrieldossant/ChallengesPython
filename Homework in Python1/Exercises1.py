@@ -1,4 +1,5 @@
-reply = int(input(print(f'Type 1 to calculate the perimeter \nType 2 to calculate the area')))
+reply = int(input(f'Type 1 to calculate the perimeter \nType 2 to calculate the area'))
+
 def checkAwnser():
     if reply == 1:
         calculatePerimeter()
