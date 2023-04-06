@@ -1,10 +1,15 @@
-valor_binario = "1111"
+import re
+# Done with the ( FOR )
 
-# Converte a string em uma lista de caracteres e inverte a ordem dos caracteres
-lista_caracteres = list(valor_binario)
-lista_caracteres.reverse()
+binaryNumber = input("Type a binary number: ")
+binaryNumber = binaryNumber[::-1]
+pattern = r'^[01]+$'
+decimal = 0
 
-# Converte cada caractere em um número inteiro
-lista_numeros = [int(caractere) for caractere in lista_caracteres]
+if re.match(pattern, binaryNumber):
+    for i in range(len(binaryNumber)):
+        decimal += int(binaryNumber[i]) * (2 ** i)       
+    print(f"The decimal result is {decimal}")
+else:
+    print("Invalid binary number!")
 
-print(lista_numeros)
