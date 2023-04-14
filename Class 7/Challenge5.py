@@ -7,6 +7,8 @@ if activityNote >= 0 and activityNote <= 10:
     sum += activityNote
 elif examGrade >= 0 and examGrade <= 10:
     sum += examGrade
+else:
+    print("Invalid grade!")
 
 average = sum/2
 
