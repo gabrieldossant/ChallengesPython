@@ -1,4 +1,4 @@
-activityNote = float(input("Type the acitivity note: "))
+activityNote = float(input("Type the activity note: "))
 examGrade = float(input("Type the exam grade: "))
 sum = 0
 average = 0
