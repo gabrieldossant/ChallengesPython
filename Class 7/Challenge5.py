@@ -39,17 +39,21 @@ def mediaGrade(x):
     division = x/2
     return division
 
+def verifyResult(x):
+    if x >= 0 and x < 4:
+        print(f"REPROVED! \n Your media result is {x}")
+    elif x >= 4 and x < 7:
+        print(f"EXAM! \n Your media result is {x}")
+    else:
+        print(f"APROVED! \n Your media result is {x}")
+
 def show():
     pushGrade()
     examGrade = verifyExamGrade()
     sumActivity = sumGradesActivity(grade)
     sumTotal = sumGrades(examGrade, sumActivity)
     result = mediaGrade(sumTotal)
-    print(f"The media result is {result}.")
+    verifyResult(result)
 
 grade = []
 show()
-
-
-
-
