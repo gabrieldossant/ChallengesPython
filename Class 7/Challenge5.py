@@ -6,23 +6,50 @@
     other 50% will be a (single) Assessment. How will this algorithm work? 
     Use your knowledge of abstraction, algorithms, and problem decomposition
 '''
-activityNote = float(input("Type the activity note: "))
-examGrade = float(input("Type the exam grade: "))
-sum = 0
-average = 0
+def verifyActivityNote(x):
+    gradeActivity = float(input(f"Enter your {x} activity grade: [0/2]"))
+    if(gradeActivity >= 0 and gradeActivity <= 2):
+        return gradeActivity
+    else: 
+        print("Invalid number. Try again inside the dedault.")
+        verifyActivityNote(x)
 
-if activityNote >= 0 and activityNote <= 10:
-    sum += activityNote
-elif examGrade >= 0 and examGrade <= 10:
-    sum += examGrade
-else:
-    print("Invalid grade!")
+def pushGrade():
+    for i in range(1, 6):
+        grade.append(verifyActivityNote(i))
 
-average = sum/2
+def verifyExamGrade():
+    exam = float(input(f"Enter your Exam grade: [0/10]"))
+    if exam >= 0 and exam <= 10:
+        return exam
+    else:
+        print("Invalid number. Try Again inside the default.")
 
-if average >= 0 and average < 4:
-    print(f"The average students is {average} \n REPROVED")
-elif average >= 4 and average < 7:
-    print(f"The average students is {average} \n EXAM")
-elif average >= 7 and average <= 10:
-    print(f"The average students is {average} \n APROVED")
+def sumGradesActivity(list):
+    sumAct = 0
+    for i in range(len(list)):
+        sumAct += list[i]
+    return sumAct
+
+def sumGrades(x, y):
+    total = x + y
+    return total
+
+def mediaGrade(x):
+    division = x/2
+    return division
+
+def show():
+    pushGrade()
+    examGrade = verifyExamGrade()
+    sumActivity = sumGradesActivity(grade)
+    sumTotal = sumGrades(examGrade, sumActivity)
+    result = mediaGrade(sumTotal)
+    print(f"The media result is {result}.")
+
+grade = []
+show()
+
+
+
+
