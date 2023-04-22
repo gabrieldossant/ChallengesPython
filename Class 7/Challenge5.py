@@ -12,7 +12,7 @@ def verifyActivityNote(x):
         return gradeActivity
     else: 
         print("Invalid number. Try again inside the dedault.")
-        verifyActivityNote(x)
+        return verifyActivityNote(x)
 
 def pushGrade():
     for i in range(1, 6):
@@ -24,6 +24,7 @@ def verifyExamGrade():
         return exam
     else:
         print("Invalid number. Try Again inside the default.")
+        return verifyExamGrade()
 
 def sumGradesActivity(list):
     sumAct = 0
@@ -41,11 +42,11 @@ def mediaGrade(x):
 
 def verifyResult(x):
     if x >= 0 and x < 4:
-        print(f"REPROVED! \n Your media result is {x}")
+        print(f"REPROVED! \n Your media result is {x.__round__(2)}")
     elif x >= 4 and x < 7:
-        print(f"EXAM! \n Your media result is {x}")
+        print(f"EXAM! \n Your media result is {x.__round__(2)}")
     else:
-        print(f"APROVED! \n Your media result is {x}")
+        print(f"APROVED! \n Your media result is {x.__round__(2)}")
 
 def show():
     pushGrade()
